@@ -1,5 +1,6 @@
 package com.example.dailymate
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dailymate.databinding.ActivityMainBinding
@@ -16,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initBottomNavigation()
+
+        // 스플래시에서 전달된 데이터 처리
+        val navigateTo = intent.getStringExtra("navigateTo")
+        if (navigateTo == "recommend") {
+            binding.bottomNavigationView.selectedItemId = R.id.nav_recommend
+        }
     }
 
     private fun initBottomNavigation(){
@@ -41,10 +48,10 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.nav_recommend -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_container, RecommendFragment())
-                        .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true
+                    // RecommendSplash 실행
+                    val intent = Intent(this, RecommendSplash::class.java)
+                    startActivity(intent)
+                    return@setOnItemSelectedListener false
                 }
                 R.id.nav_fortune -> {
                     supportFragmentManager.beginTransaction()
