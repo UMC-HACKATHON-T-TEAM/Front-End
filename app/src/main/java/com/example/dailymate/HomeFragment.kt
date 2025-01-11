@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.String
+
 
 class FragmentHome : Fragment() {
     private var tvTemperature: TextView? = null
@@ -39,8 +39,7 @@ class FragmentHome : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-        // WeatherService 인터페이스
-        val service = retrofit.create(WeatherService::class.java)
+
 
 
         updateUIWithDummyData()
