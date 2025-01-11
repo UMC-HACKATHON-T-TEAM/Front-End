@@ -10,7 +10,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class FragmentHome : Fragment() {
+class HomeFragment : Fragment() {
     private var tvTemperature: TextView? = null
     private var tvFeelsLike: TextView? = null
     private var tvPm10: TextView? = null
