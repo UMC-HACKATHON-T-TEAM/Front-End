@@ -37,7 +37,8 @@
 
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".RecommendSplash" android:exported="false" />
-
+        <activity android:name=".MyPageEditActivity" android:exported="false" />
+        <activity android:name=".Login2Activity" android:exported="false" />
     </application>
 
 </manifest>

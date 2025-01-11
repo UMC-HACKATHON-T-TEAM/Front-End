@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_mypage -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(R.id.main_container, MypageFragment())
+                        .replace(R.id.main_container, MyPageFragment())
                         .commitAllowingStateLoss()
                     return@setOnItemSelectedListener true
                 }
