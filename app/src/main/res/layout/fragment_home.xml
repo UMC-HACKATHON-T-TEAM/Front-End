@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000957">
+
+    <ImageView
+        android:id="@+id/home_logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_halfmoon"
+        android:layout_marginTop="26.12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="류엠씨"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/pretendard_semibold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_nim_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="님"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/pretendard_medium"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@id/home_username_tv"
+        app:layout_constraintBottom_toBottomOf="@id/home_username_tv" />
+
+    <TextView
+        android:id="@+id/home_recommend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DailyMate가 추천하는"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/pretendard_medium"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_username_tv" />
+
+    <TextView
+        android:id="@+id/home_style_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 스타일"
+        android:textSize="20sp"
+        android:textColor="#ffca27"
+        android:fontFamily="@font/pretendard_medium"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_recommend_tv" />
+
+    <TextView
+        android:id="@+id/home_gotosee_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="을 보러 가볼까요?"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/pretendard_medium"
+        app:layout_constraintStart_toEndOf="@id/home_style_tv"
+        app:layout_constraintTop_toTopOf="@id/home_style_tv" />
+
+    <TextView
+        android:id="@+id/home_custom_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기온과 오늘의 일정에 맞는 스타일"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_gotosee_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go! 가기"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_custom_tv" />
+
+    <ImageView
+        android:id="@+id/home_whiteback_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_homeback_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/home_todayweather_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 날씨"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/pretendard_semibold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_whiteback_iv" />
+
+    <TextView
+        android:id="@+id/home_location_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="서울특별시"
+        android:textSize="12sp"
+        android:textColor="#707070"
+        android:fontFamily="@font/pretendard_medium"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_pin_iv"
+        app:layout_constraintBottom_toBottomOf="@id/home_pin_iv" />
+
+    <ImageView
+        android:id="@+id/home_pin_iv"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/ic_pin"
+        app:layout_constraintEnd_toStartOf="@id/home_location_tv"
+        app:layout_constraintTop_toTopOf="@id/home_todayweather_tv" />
+
+    <TextView
+        android:id="@+id/home_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘은 2025년 1월 11일 토요일이에요"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_todayweather_tv" />
+
+    <LinearLayout
+        android:id="@+id/home_weather_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_date_tv"
+        android:orientation="horizontal">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="33dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_weatherback"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/home_feeltemp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="체감 온도"
+                android:textSize="8sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_feeltemperature_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-4°"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_feeltemp_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="33dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_weatherback"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/home_realtemp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현재 온도"
+                android:textSize="8sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_realtemperature_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-1°"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_realtemp_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="33dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_weatherback"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/home_finedust_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미세먼지"
+                android:textSize="8sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_finedustnum_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나쁨"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_finedust_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="72dp"
+                android:src="@drawable/img_weatherback"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/home_rain_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="체감 온도"
+                android:textSize="8sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_waterpercent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="85%"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_rain_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/home_grayback_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_homeback_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/home_datesche_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025년 1월 11일 토요일"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/pretendard_semibold"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/home_grayback_iv" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_schedule_rv"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        tools:listitem="@layout/item_element"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_datesche_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
