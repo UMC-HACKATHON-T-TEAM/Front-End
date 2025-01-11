@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ic_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fortune_title_iv"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_mypage_frame" />
+
+
+    <ImageView
+        android:layout_width="377dp"
+        android:layout_height="550dp"
+        android:background="@drawable/background_element"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+
+    <ImageView
+        android:id="@+id/item_image_iv"
+        android:layout_width="84dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_myphoto"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <LinearLayout
+        android:id="@+id/item_content_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="170dp">
+
+        <TextView
+            android:id="@+id/item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_semibold"
+            android:text="류엠씨"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pretendard_regular"
+            android:text="umc0112"
+            android:textColor="#B1B1B1"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="332dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="22dp">
+
+        <!-- 닉네임 입력 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="닉네임"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="류엠씨"
+            android:padding="8dp" />
+
+        <!-- 생년월일 입력 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="생년월일"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="2003년 06월 15일"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:background="@drawable/btn_save"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="724dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
