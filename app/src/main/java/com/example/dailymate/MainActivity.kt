@@ -1,53 +1,62 @@
 package com.example.dailymate
 
-import android.graphics.Color
 import android.os.Bundle
-import android.text.InputType
-import android.view.MotionEvent
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import com.example.dailymate.databinding.ActivityLoginBinding
+import com.example.dailymate.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityLoginBinding
-    private var isPasswordVisible = false
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // ViewBinding 초기화
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // drawableEnd 클릭 이벤트 처리
-        binding.loginPasswordEt.setOnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_UP) {
-                val drawableEnd = binding.loginPasswordEt.compoundDrawablesRelative[2]
-                if (drawableEnd != null && event.rawX >= (binding.loginPasswordEt.right - drawableEnd.bounds.width())) {
-                    isPasswordVisible = !isPasswordVisible
+        initBottomNavigation()
+    }
 
-                    if (isPasswordVisible) {
-                        binding.loginPasswordEt.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                        binding.loginPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                            null,
-                            null,
-                            ContextCompat.getDrawable(this, R.drawable.ic_visibility_on),
-                            null
-                        )
-                    } else {
-                        binding.loginPasswordEt.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                        binding.loginPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                            null,
-                            null,
-                            ContextCompat.getDrawable(this, R.drawable.ic_visibility_off),
-                            null
-                        )
-                    }
+    private fun initBottomNavigation(){
 
-                    // 커서 위치 유지
-                    binding.loginPasswordEt.setSelection(binding.loginPasswordEt.text?.length ?: 0)
-                    return@setOnTouchListener true
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.main_container, HomeFragment())
+            .commitAllowingStateLoss()
+
+        binding.bottomNavigationView.setOnItemSelectedListener{ item ->
+            when (item.itemId) {
+
+                R.id.nav_home -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, HomeFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+
+                R.id.nav_schedule -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, ScheduleFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+                R.id.nav_recommend -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, RecommendFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+                R.id.nav_fortune -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, FortuneFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
+                }
+                R.id.nav_mypage -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, MypageFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
                 }
             }
             false
