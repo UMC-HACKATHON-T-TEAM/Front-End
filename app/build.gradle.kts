@@ -60,7 +60,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     // retrofit
-    implementation(libs.retrofit)
+    implementation(libs.squareup.retrofit)
     implementation (libs.retrofit2.converter.gson)
 
     testImplementation(libs.junit)

@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-data class Schedule(val title: String, val content: String)
+data class Schedules(val title: String, val content: String)
 
-class RecommendScheduleRVAdapter(private var schedules: List<Schedule>) :
+class RecommendScheduleRVAdapter(private var schedules: List<Schedules>) :
     RecyclerView.Adapter<RecommendScheduleRVAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,7 +29,7 @@ class RecommendScheduleRVAdapter(private var schedules: List<Schedule>) :
         private val scheduleTitle: TextView = itemView.findViewById(R.id.item_title_tv)
         private val scheduleContent: TextView = itemView.findViewById(R.id.item_content_tv)
 
-        fun bind(item: Schedule) {
+        fun bind(item: Schedules) {
             scheduleTitle.text = item.title
             scheduleContent.text = item.content
         }

@@ -227,7 +227,7 @@
                 android:id="@+id/insert_schedule_ib"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="transparent"
+                android:background="@android:color/transparent"
                 app:srcCompat="@drawable/btn_schedule_insert"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

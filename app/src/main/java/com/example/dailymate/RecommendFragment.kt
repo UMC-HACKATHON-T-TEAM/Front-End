@@ -15,9 +15,9 @@ class RecommendFragment : Fragment() {
 
     // 더미 데이터 리스트
     private val scheduleList = listOf(
-        Schedule("UMC 해커톤", "기깔나게 1등하기"),
-        Schedule("22시 프로젝트 회의", "20시 회의 준비"),
-        Schedule("알바", "보건증 챙겨가기")
+        Schedules("UMC 해커톤", "기깔나게 1등하기"),
+        Schedules("22시 프로젝트 회의", "20시 회의 준비"),
+        Schedules("알바", "보건증 챙겨가기")
     )
 
     override fun onCreateView(
