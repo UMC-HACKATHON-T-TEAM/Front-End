@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/recommend_contents_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recommend_contents_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/recommend_frame_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_recommend_frame"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recommend_today_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘은"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/pretendard_medium"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/recommend_sche_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_today_tv"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/recommend_sche_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_blank"
+                    android:text="UMC 해커톤"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="있는 날,"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recommend_weather_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_sche_ll"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/recommend_weather_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_blank"
+                    android:text="현재 기온 -1° C"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/pretendard_semibold"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="에 어울리는 옷은?"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/pretendard_medium"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/recommend_frame_iv">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/recommend_outer_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outer: "
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/recommend_outer_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="롱 패딩"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/recommend_top_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_top" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top: "
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/recommend_top_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="흰색 맨투맨"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/recommend_bottom_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bottom" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bottom: "
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/recommend_bottom_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="조거 팬츠"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/recommend_acc_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_acc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acc: "
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/recommend_acc_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="목도리, 장갑, 실버링"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/pretendard_semibold"
+                        android:textColor="#ffffff" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/recommend_todayweather_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 날씨"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_frame_iv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recommend_weather_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_todayweather_tv"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="16dp"
+                android:background="@drawable/background_element">
+
+                <ImageView
+                    android:id="@+id/item_image_iv"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/img_circlebackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/item_icon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_temp"
+                    app:layout_constraintStart_toStartOf="@id/item_image_iv"
+                    app:layout_constraintEnd_toEndOf="@id/item_image_iv"
+                    app:layout_constraintTop_toTopOf="@id/item_image_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/item_image_iv" />
+
+                <LinearLayout
+                    android:id="@+id/item_content_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/item_image_iv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재 기온 -1° C"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/pretendard_semibold" />
+
+                    <TextView
+                        android:id="@+id/item_content_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="서울특별시의 날씨에요"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/pretendard_regular" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recommend_schedule_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_weather_cl">
+
+                <TextView
+                    android:id="@+id/recommend_todayschedule_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 일정"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/pretendard_semibold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recommend_schedule_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_element"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recommend_todayschedule_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/recommend_todayluck_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘의 운세"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/pretendard_semibold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_schedule_cl" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recommend_luck_cl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommend_todayluck_tv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:padding="16dp"
+                android:background="@drawable/background_element">
+
+                <ImageView
+                    android:id="@+id/item_luckimage_iv"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/img_circlebackground"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/item_luckicon_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_fortune"
+                    app:layout_constraintStart_toStartOf="@id/item_luckimage_iv"
+                    app:layout_constraintEnd_toEndOf="@id/item_luckimage_iv"
+                    app:layout_constraintTop_toTopOf="@id/item_luckimage_iv"
+                    app:layout_constraintBottom_toBottomOf="@id/item_luckimage_iv" />
+
+                <LinearLayout
+                    android:id="@+id/item_luckcontent_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toEndOf="@id/item_luckimage_iv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/item_lucktitle_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오늘의 운세 점수 79점"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/pretendard_semibold" />
+
+                    <TextView
+                        android:id="@+id/item_luckcontent_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1월 11일 경진일 (庚辰日)"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/pretendard_regular" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
