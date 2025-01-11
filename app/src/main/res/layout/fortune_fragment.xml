@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fortune_title_iv"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_frm_fortune" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fortune_title_iv">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/fortune_score_iv"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_frm_fortune_score" />
+
+            <ImageView
+                android:id="@+id/fortune_logo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="125dp"
+                android:src="@drawable/img_logo_switched"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fortune_score_iv" />
+
+            <ImageView
+                android:id="@+id/fortune_score_text_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="180dp"
+                app:srcCompat="@drawable/img_text_fortune_score"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/fortune_score_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="195dp"
+                android:layout_marginTop="63dp"
+                android:text="79"
+                android:textSize="16pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/fortune_content_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="145dp"
+                app:layout_constraintTop_toTopOf="@+id/fortune_score_iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/border_shape">
+
+                <TextView
+                    android:id="@+id/fortune_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 운세"
+                    android:textColor="@android:color/black"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fortune_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="오늘은 과거의 경험을 바탕으로 새로운 기회를 탐색하기 좋은 날입니다. 주변의 도움을 받을 가능성이 높으니, 적극적으로 사람과 소통해보세요. 특히 금전운이 좋은 편이니 재정적 계획을 세우기 적합합니다. 다만, 완벽을 추구하려는 경향을 조절하고 지나친 고집은 피하세요."
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt"
+                    android:layout_marginBottom="5dp" />
+
+                <TextView
+                    android:id="@+id/lucky_colors_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="행운을 가져다 줄 색깔"
+                    android:textColor="@android:color/black"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/ic_circle_white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="화이트"
+                            android:textSize="8pt"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="명료한 판단력과 심리적 안정감을 줍니다."
+                            android:textSize="6pt" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/ic_circle_grey" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="실버"
+                            android:textSize="8pt"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center"
+                            android:text="긍정적 에너지를 끌어당기고 행운을 증폭시킵니다."
+                            android:textSize="6pt" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fortune_item_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="행운을 가져다줄 아이템"
+                    android:textColor="@android:color/black"
+                    android:textSize="8pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fortune_item1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="금속 액세서리"
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fortune_item1_description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="금이나 은으로 된 목걸이와 반지는 기운을 상승시켜요"
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt" />
+
+                <TextView
+                    android:id="@+id/fortune_item2_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="다이어리나 노트"
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fortune_item2_description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="계획과 목표를 정리하면 오늘 하루가 더 효율적이에요"
+                    android:textColor="@android:color/black"
+                    android:textSize="6pt" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/insert_schedule_ib"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="transparent"
+                app:srcCompat="@drawable/btn_schedule_insert"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fortune_content_ll"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
