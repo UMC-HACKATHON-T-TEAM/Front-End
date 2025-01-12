@@ -7,7 +7,7 @@
     <string name="add_schedule_date">등록하려는 일정의 날짜를 입력해주세요</string>
     <string name="write_date">일정에 대해 적어주세요</string>
     <string name="memo">메모</string>
-    <string name="ex_date">ex) 2025.01.11</string>
+    <string name="ex_date">ex) 2025–01–11</string>
     <string name="ex_schedule">ex) 프로젝트 회의</string>
     <string name="ex_memo">ex) 20시에 회의 준비하기</string>
 </resources>

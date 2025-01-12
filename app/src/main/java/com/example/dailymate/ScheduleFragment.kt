@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
@@ -43,8 +44,14 @@ class ScheduleFragment : Fragment(R.layout.schedule_manage) {
             }
         }
 
-        val notificationButton = view.findViewById<FloatingActionButton>(R.id.item_trash_iv)
-        notificationButton.setOnClickListener {
+        val addScheduleButton = view.findViewById<FloatingActionButton>(R.id.to_add_schedule_activity_button)
+        addScheduleButton?.setOnClickListener {
+            val intent = Intent(requireContext(), ScheduleAddActivity::class.java)
+            startActivity(intent)
+        }
+
+        val notificationButton = view.findViewById<ImageButton>(R.id.item_trash_iv)
+        notificationButton?.setOnClickListener {
 
             val deleteIntent = Intent(context, NotificationReceiver::class.java).apply {
                 action = "DELETE_ACTION"
@@ -77,12 +84,6 @@ class ScheduleFragment : Fragment(R.layout.schedule_manage) {
             val notificationManager =
                 requireContext().getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.notify(1, notification)
-        }
-
-        val addScheduleButton = view.findViewById<FloatingActionButton>(R.id.to_add_schedule_activity_button)
-        addScheduleButton.setOnClickListener {
-            val intent = Intent(requireContext(), ScheduleAddActivity::class.java)
-            startActivity(intent)
         }
     }
 }

@@ -53,17 +53,17 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     return@setOnItemSelectedListener false
                 }
-                R.id.nav_fortune -> {
+                R.id.nav_fortune -> { /*
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_container, FortuneFragment())
                         .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true
+                    return@setOnItemSelectedListener true */
                 }
-                R.id.nav_mypage -> {
+                R.id.nav_mypage -> { /*
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_container, MypageFragment())
                         .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true
+                    return@setOnItemSelectedListener true */
                 }
             }
             false

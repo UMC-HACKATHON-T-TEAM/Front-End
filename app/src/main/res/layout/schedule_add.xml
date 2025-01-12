@@ -78,7 +78,7 @@
                     android:id="@+id/scheduleEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/ex_schedule">
+                    android:hint="ex) 프로젝트 회의">
 
                 </EditText>
 
@@ -114,20 +114,5 @@
         </LinearLayout>
 
     </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@android:color/transparent"
-        app:itemBackground="@android:color/transparent"
-        app:itemIconTint="@drawable/menu_selector_color"
-        app:itemRippleColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        app:labelVisibilityMode="unlabeled"
-        app:itemTextColor="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
