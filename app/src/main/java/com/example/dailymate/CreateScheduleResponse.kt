@@ -1,6 +1,5 @@
 package com.example.dailymate
 
-import java.time.LocalDateTime
 
 data class CreateScheduleResponse(
     val isSuccess: Boolean,
@@ -11,6 +10,6 @@ data class CreateScheduleResponse(
 
 data class ScheduleResult(
     val scheduleId: Int,
-    val createdAt: LocalDateTime
+    val createdAt: String
 )
 

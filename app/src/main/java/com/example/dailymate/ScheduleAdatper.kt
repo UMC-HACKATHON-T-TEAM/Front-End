@@ -21,7 +21,7 @@ class ScheduleAdatper(private val ScheduleList: List<ScheduleItem>) : RecyclerVi
     }
 
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
-        val currentItem = ScheduleList[position]
+        val currentItem = ScheduleList[0]
         holder.date.text = currentItem.date
         holder.title.text = currentItem.date
         holder.content.text = currentItem.content

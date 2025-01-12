@@ -17,20 +17,21 @@ class ScheduleAddActivity : AppCompatActivity() {
         val dateEditText = findViewById<EditText>(R.id.dateEditText)
         val scheduleEditText = findViewById<EditText>(R.id.scheduleEditText)
         val memoEditText = findViewById<EditText>(R.id.memoEditText)
-        val dateText = dateEditText.text.toString()
-        val scheduleText = scheduleEditText.text.toString()
-        val memoText = memoEditText.text.toString()
 
         val apiService = RetrofitClient.apiService
 
         val addScheduleButton = findViewById<ImageButton>(R.id.add_schedule_button)
 
         addScheduleButton.setOnClickListener {
+            val dateText = dateEditText.text.toString()
+            val scheduleText = scheduleEditText.text.toString()
+            val memoText = memoEditText.text.toString()
+
             lifecycleScope.launch {
                 try {
                     val schedule = CreateSchedule(dateText, scheduleText, memoText)
+
                     val response = apiService.createSchedule(userId = 1, schedule = schedule)
-                    Log.d("ScheduleAddActivity", "API Response: $response")
 
                     if (response.isSuccessful) {
                         response.body()?.let {
