@@ -5,18 +5,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.dailymate.databinding.FragmentFortuneBinding
+import com.example.dailymate.databinding.FragmentMypageBinding
 
-class FortuneFragment : Fragment() {
+class MyPageFragment : Fragment() {
 
-    private lateinit var binding: FragmentFortuneBinding
+    private lateinit var binding: FragmentMypageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentFortuneBinding.inflate(inflater, container, false)
+        binding = FragmentMypageBinding.inflate(inflater, container, false)
 
         return binding.root
     }

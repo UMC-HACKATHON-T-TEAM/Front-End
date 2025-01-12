@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ic_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fortune_title_iv"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_mypage_frame" />
+
+
+    <ImageView
+        android:id="@+id/mypage_background_iv"
+        android:layout_width="377dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_element"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fortune_title_iv" />
+
+    <ImageView
+        android:id="@+id/item_image_iv"
+        android:layout_width="84dp"
+        android:layout_height="70dp"
+        android:src="@drawable/img_myphoto"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mypage_background_iv" />
+
+    <TextView
+        android:id="@+id/item_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="류엠씨"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:fontFamily="@font/pretendard_semibold"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_image_iv" />
+
+    <TextView
+        android:id="@+id/item_id_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="umc0112"
+        android:textColor="#B1B1B1"
+        android:textSize="14sp"
+        android:fontFamily="@font/pretendard_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_username_tv" />
+
+    <TextView
+        android:id="@+id/edit_nickname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textSize="14sp"
+        android:textColor="#424242"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_id_tv" />
+
+    <EditText
+        android:id="@+id/edit_nickname_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="류엠씨"
+        android:textSize="12sp"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="11.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_nickname_tv" />
+
+    <TextView
+        android:id="@+id/edit_birthdate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="출생 정보 입력"
+        android:textSize="14sp"
+        android:textColor="#424242"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_nickname_et" />
+
+    <EditText
+        android:id="@+id/edit_birthdate_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="2003년 6월 15일"
+        android:textSize="12sp"
+        android:fontFamily="@font/pretendard_regular"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="11.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_birthdate_tv" />
+
+    <ImageButton
+        android:id="@+id/edit_save_btn"
+        android:layout_width="351dp"
+        android:layout_height="52dp"
+        android:background="@drawable/btn_save"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mypage_background_iv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
