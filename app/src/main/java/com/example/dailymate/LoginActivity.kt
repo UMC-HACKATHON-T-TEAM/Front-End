@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // drawableEnd 클릭 이벤트 처리
+        // 비밀번호 표시/숨김 토글
         binding.loginPasswordEt.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 val drawableEnd = binding.loginPasswordEt.compoundDrawablesRelative[2]
@@ -61,20 +61,23 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.loginPasswordEt.text.toString().trim()
 
             if (email.isEmpty() || password.isEmpty()) {
-                // 이메일 또는 비밀번호가 비어 있으면 Toast 메시지 표시
                 Toast.makeText(this, "이메일과 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
-                // 입력이 완료되면 다음 화면으로 이동
-                val login2Intent = Intent(this, Login2Activity::class.java)
-                startActivity(login2Intent)
-
-                // 1초 뒤 홈 화면으로 이동
-                Handler(Looper.getMainLooper()).postDelayed({
-                    val homeIntent = Intent(this, HomeFragment::class.java)
-                    startActivity(homeIntent)
-                    finish() // 현재 Activity 종료
-                }, 1000)
+                // 온보딩 화면 표시
+                showOnboardingScreen()
             }
         }
+    }
+
+    private fun showOnboardingScreen() {
+        val onboardingIntent = Intent(this, Login2Activity::class.java)
+        startActivity(onboardingIntent)
+
+        // 1초 후 홈 화면으로 이동
+        Handler(Looper.getMainLooper()).postDelayed({
+            val homeIntent = Intent(this, MainActivity::class.java)
+            startActivity(homeIntent)
+            finish() // 현재 액티비티 종료
+        }, 1000)
     }
 }
