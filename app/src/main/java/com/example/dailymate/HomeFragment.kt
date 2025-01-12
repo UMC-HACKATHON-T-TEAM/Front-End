@@ -1,11 +1,14 @@
 package com.example.dailymate
 
 import android.os.Bundle
+import android.text.TextUtils.replace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import com.example.dailymate.databinding.FragmentHomeBinding
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -15,7 +18,7 @@ class HomeFragment : Fragment() {
     private var tvFeelsLike: TextView? = null
     private var tvPm10: TextView? = null
     private var tvRainProbability: TextView? = null
-
+    private lateinit var binding: FragmentHomeBinding
 
     private val dummyWeatherResponse = WeatherResponse(
         WeatherData(Main(16.0, 14.0)),
@@ -26,7 +29,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
 
         tvTemperature = view.findViewById(R.id.home_feeltemperature_tv)
         tvFeelsLike = view.findViewById(R.id.home_realtemperature_tv)
@@ -39,7 +43,14 @@ class HomeFragment : Fragment() {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
-
+        // 버튼 클릭 리스너 추가
+        binding.homeGoBtn.setOnClickListener {
+            // RecommendFragment로 화면 전환
+            parentFragmentManager.commit {
+                replace(R.id.main_container, RecommendFragment())
+                addToBackStack(null)
+            }
+        }
 
 
         updateUIWithDummyData()
