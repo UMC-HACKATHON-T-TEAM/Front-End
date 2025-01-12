@@ -48,22 +48,22 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.nav_recommend -> {
-                    // RecommendSplash 실행
-                    val intent = Intent(this, RecommendSplash::class.java)
-                    startActivity(intent)
-                    return@setOnItemSelectedListener false
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.main_container, RecommendFragment())
+                        .commitAllowingStateLoss()
+                    return@setOnItemSelectedListener true
                 }
-                R.id.nav_fortune -> { /*
+                R.id.nav_fortune -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_container, FortuneFragment())
                         .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true */
+                    return@setOnItemSelectedListener true
                 }
-                R.id.nav_mypage -> { /*
+                R.id.nav_mypage -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.main_container, MyPageFragment())
                         .commitAllowingStateLoss()
-                    return@setOnItemSelectedListener true */
+                    return@setOnItemSelectedListener true
                 }
             }
             false
